@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Temp Converter</title>
+</head>
+<body>
+
+    <div class="container title">
+        <h1>Temperature Converter</h1>
+    </div>
+    <div class="container userInput">
+        <div class="row">
+            <div class="col-4 tempUnit">
+
+                <p>Choose the unit of temperature you are starting with: </p>
+                <input type="radio" name="startUnit" value= "fah" id="fahStart">
+                <label for="fahStart">Fahrenheit</label><br>
+
+                <input type="radio" name="startUnit" id="celStart">
+                <label for="celStart">Celsius</label><br>
+
+                <input type="radio" name="startUnit" id="kelStart">
+                <label for="kelStart">Kelvin</label><br>
+
+            </div>
+            <div class="col-4 tempConvert">
+                <p>Choose the unit of temperature you are converting to:</p>
+
+                <input type="radio" name="endUnit" value= "fah" id="fahEnd">
+                <label for="fahEnd">Fahrenheit</label><br>
+
+                <input type="radio" name="endUnit" id="celEnd">
+                <label for="celEnd">Celsius</label><br>
+
+                <input type="radio" name="endUnit" id="kelEnd">
+                <label for="kelEnd">Kelvin</label><br>
+            </div>
+            <div class="col-4 tempValue">
+                <p>Enter the starting temperature's known value: </p>
+                <input type="text" name="Temp Value" id="tempVal">
+                <input type="submit" value="Submit ">
+            </div>
+        </div>
+    </div>
+    <div class="container tempResults">
+        <p>ending temp value and unit</p>
+    </div>
+    
+</body>
+<script text="text/javascript" src="app.js"></script>
+</html>
