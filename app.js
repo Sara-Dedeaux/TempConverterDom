@@ -86,7 +86,7 @@ function tempConverter(){
         tempConversion=farenheitTemp;
         convertedTempDisplay.innerHTML="Degrees in Farenheit: "
     }else{
-        alert("Error: 2 different temperture units must be selected")
+        alert("Error:  Two different temperture units must be selected")
     }//END IF/ELSE
    
     //USE THE GLOBAL VARIABLES CREATED EARLIER TO TARGET THE ELEMENT WHERE I WANT TO DISPLAY THE CONVERTED NUMBER - UPDATE THE TEXT BY USING .INNERHTML WITH tempConversion VARIABLE THAT WAS SET IN THE ABOVE IF/ELSE TREE

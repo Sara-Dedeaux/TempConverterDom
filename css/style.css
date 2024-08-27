@@ -23,6 +23,7 @@
 
 p{
     font-size: xx-large;
+    color: aqua;
 }
 
 
@@ -50,3 +51,11 @@ p{
     accent-color: magenta
 }
 
+.submitRequest {
+    padding-top: 55px;
+}
+
+.submitRequest input{
+    background-color: darkviolet;
+    color: white
+}
