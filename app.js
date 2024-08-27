@@ -2,18 +2,14 @@
 //#region STARTING TEMP ELEMENT & INPUT
 // CREATE VARIABLE - TO TARGET ELEMENT WHERE USER WILL ENTER STARTING TEMP VALUE
 let tempValue= document.getElementById("tempVal")
-console.log(tempValue)
 
 //CREATE VARIABLE TO HOLD INFORMATION USER INPUTS
 let startTempValue;
-console.log(startTempValue)
-
 //#endregion
 
 //#region SUBMIT USER INFORMATION ELEMENT & ACTION
 //CREATE VARIABLE TO TARGET ELEMENT FOR EVENT LISTENER
 let enterTempValue= document.getElementById("submitVal")
-console.log(enterTempValue)
 
 //CREATE EVENT LISTENER FOR SUBMIT BUTTON
 enterTempValue.addEventListener("click", tempConverter);
@@ -22,22 +18,16 @@ enterTempValue.addEventListener("click", tempConverter);
 //#region UPDATE AND DISPLAY CONVERTED TEMP
 //CREATE VARIABLE TO TARGET ELEMENT TO DISPLAY CONVERTED TEMP TO WEBPAGE
 let convertedTempDisplay= document.querySelector(".tempResults p")
-console.log(convertedTempDisplay); 
 
 //CREATE VARIABLE TO HOLD UPDATED VALUE INFORMATION
 let tempConversion;
 //#endregion
-
-
-
 
 //FUNCTION IS CALLED WHEN USER CLICKS SUBMIT BUTTON
 function tempConverter(){
     
     //startTempValue WAS CREATED AS A GLOBAL VARIABLE TO HOLD THE INFORMATION THE USER HAS ENTERED - .VALUE PULLS JUST THE TEXT FROM THE ELEMENT
     startTempValue=tempValue.value;
-    console.log(startTempValue)
-  
 
     //VARIABLES CREATED JUST FOR FUNCTION
     let celsiusTemp;
@@ -54,7 +44,6 @@ function tempConverter(){
     let findCel= document.getElementById("celEnd");
     let findKel= document.getElementById("kelEnd");
 
-
     //IF ELSE TREE - RADIO BUTTONS ARE EVALUATED BY USING .CHECK - A TRUE OR FALSE VALUE IS RETURNED - IF USER HAS CHECKED THAT RADIO BUTTON IT RUNS TRUE - IF NOT FALSE
 
     //WHEN A TRUE && TRUE STATEMENT IS FOUND:
@@ -64,20 +53,17 @@ function tempConverter(){
 
     //UPDATE THE GLOBAL VARIABLE tempConversion TO HOLD THE CONVERTED NUMBER
 
-    
     if (useFah.checked && findCel.checked){
         farenheitTemp=startTempValue;
         celsiusTemp= fahToCel(farenheitTemp);
         tempConversion=celsiusTemp
         convertedTempDisplay.innerHTML="Degrees in Celsius: "
-
     }else if(useFah.checked && findKel.checked){
         farenheitTemp=startTempValue;
         celsiusTemp=fahToCel(farenheitTemp);
         kelvinTemp=celToKel(celsiusTemp);
         tempConversion=kelvinTemp
         convertedTempDisplay.innerHTML="Degrees in Kelvin: "
-        
     }else if(useCel.checked && findFah.checked){
         celsiusTemp=startTempValue
         farenheitTemp=celToFah(celsiusTemp);
@@ -105,35 +91,28 @@ function tempConverter(){
    
     //USE THE GLOBAL VARIABLES CREATED EARLIER TO TARGET THE ELEMENT WHERE I WANT TO DISPLAY THE CONVERTED NUMBER - UPDATE THE TEXT BY USING .INNERHTML WITH tempConversion VARIABLE THAT WAS SET IN THE ABOVE IF/ELSE TREE
     convertedTempDisplay.innerHTML+=tempConversion;
-        
-}
+}//END tempConverter
 
 function fahToCel(fahTemp){
 
     let celsiusTemp=(fahTemp-32) * 5/9;
-        (`Temp in Celsius: ${celsiusTemp}`);
-        return celsiusTemp
-        
+    (`Temp in Celsius: ${celsiusTemp}`);
+    return celsiusTemp
 }//END fahToCel
     
 function celToKel(celTemp){
     let kelvinTemp= celTemp + 273.15;
-    console.log(`Temp in Kelvin: ${kelvinTemp}`);
     return kelvinTemp
 }//End celToKel
 
 function celToFah(celTemp){
     let fahTemp=(celTemp * 9/5) + 32;
-    console.log(`Temp in Farenheit: ${fahTemp}`);
-   
     return fahTemp;
 }//END celToFah
 
 function kelToCel(kelTemp){
     let celTemp= kelTemp-273.15;
-    console.log(`Temp in Celsius: ${celTemp}`);
     return celTemp;
-
 }//END kelToCel
      
 
