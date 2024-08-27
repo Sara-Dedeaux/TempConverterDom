@@ -11,12 +11,17 @@
 
     <div class="container title">
         <h1>Temperature Converter</h1>
+        <br><br>
     </div>
     <div class="container userInput">
         <div class="row">
-            <div class="col-4 tempUnit">
-
-                <p>Choose the unit of temperature you are starting with: </p>
+            <div class="col-12 tempValue">
+                <p>Degrees: </p>
+                <input type="text" name="Temp Value" id="tempVal">
+            </div>
+            <div class="col-12 tempUnit">
+                <br><br>
+                <p>Starting Unit: </p>
                 <input type="radio" name="startUnit" value= "fah" id="fahStart">
                 <label for="fahStart">Fahrenheit</label><br>
 
@@ -27,30 +32,27 @@
                 <label for="kelStart">Kelvin</label><br>
 
             </div>
-            <div class="col-4 tempValue">
-                <p>Enter the starting temperature's known value: </p>
-                <input type="text" name="Temp Value" id="tempVal">
-            </div>
-            <div class="col-4 tempConvert">
-                <p>Choose the unit of temperature you are converting to:</p>
-
+            <div class="col-12 tempConvert">
+                <br><br>
+                <p>Convert into: </p>
                 <input type="radio" name="endUnit" value= "fah" id="fahEnd">
                 <label for="fahEnd">Fahrenheit</label><br>
-
+                
                 <input type="radio" name="endUnit" id="celEnd">
                 <label for="celEnd">Celsius</label><br>
-
+                
                 <input type="radio" name="endUnit" id="kelEnd">
                 <label for="kelEnd">Kelvin</label><br>
             </div>
-            <div class="col-4 submitRequest">
-                <p>Enter the starting temperature's known value: </p>
+            <div class="col-12 submitRequest">
+                <br><br>
                 <input type="button" value="Submit" id="submitVal">
             </div>
         </div>
     </div>
     <div class="container tempResults">
-        <p>ending temp value and unit</p>
+        <br><br>
+        <p>Converted Temperature: </p>
     </div>
     
 </body>
