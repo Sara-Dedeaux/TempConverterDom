@@ -88,9 +88,15 @@ function tempConverter(){
     }else{
         alert("Error:  Two different temperture units must be selected")
     }//END IF/ELSE
+
+    
    
     //USE THE GLOBAL VARIABLES CREATED EARLIER TO TARGET THE ELEMENT WHERE I WANT TO DISPLAY THE CONVERTED NUMBER - UPDATE THE TEXT BY USING .INNERHTML WITH tempConversion VARIABLE THAT WAS SET IN THE ABOVE IF/ELSE TREE
     convertedTempDisplay.innerHTML+=tempConversion;
+
+    convertedTempDisplay.style.fontFamily="Honk"
+    convertedTempDisplay.style.fontSize="60px"
+    let convertedBackground=document.querySelector(".tempResults")
 }//END tempConverter
 
 function fahToCel(fahTemp){

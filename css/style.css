@@ -1,6 +1,6 @@
 
 #bodyBackground{
-    background-color: rgb(7, 32, 32);
+    background-color: #072020;
     color: wheat;
 
     
@@ -46,7 +46,7 @@ p{
 }
 
 #fahEnd {
-    accent-color: yellow
+    accent-color: #c0c06a
 }
 
 #celEnd {
