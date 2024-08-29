@@ -51,12 +51,22 @@ p{
 
 #celEnd {
     accent-color: orangered
+    
 }
+
 
 #kelEnd {
     accent-color: magenta
 }
 
+#celLab{
+    padding-right: 27px;
+}
+
+#kelLab{
+    padding-right: 33px;
+
+}
 .submitRequest {
     padding-top: 55px;
 }

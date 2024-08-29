@@ -94,12 +94,11 @@ function tempConverter(){
     
    
     //USE THE GLOBAL VARIABLES CREATED EARLIER TO TARGET THE ELEMENT WHERE I WANT TO DISPLAY THE CONVERTED NUMBER - UPDATE THE TEXT BY USING .INNERHTML WITH tempConversion VARIABLE THAT WAS SET IN THE ABOVE IF/ELSE TREE
-    //convertedTempDisplay.innerHTML+=tempConversion;
 
     convertedTempDisplay.style.fontFamily="Honk"
     convertedTempDisplay.style.fontSize="60px"
 
-    tempConversion=0;
+   // tempConversion=0;
  
 }//END tempConverter
 
