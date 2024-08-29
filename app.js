@@ -9,7 +9,7 @@ let startTempValue;
 
 //#region SUBMIT USER INFORMATION ELEMENT & ACTION
 //CREATE VARIABLE TO TARGET ELEMENT FOR EVENT LISTENER
-let enterTempValue= document.getElementById("submitVal")
+let enterTempValue= document.getElementById("submitVal");
 
 //CREATE EVENT LISTENER FOR SUBMIT BUTTON
 enterTempValue.addEventListener("click", tempConverter);
@@ -52,51 +52,55 @@ function tempConverter(){
     //FUNCTIONS WERE CREATED TO HANDLE THE CALCULATIONS AND ARE CALLED ONLY WHEN NEEDED - EX (fahToCel)
 
     //UPDATE THE GLOBAL VARIABLE tempConversion TO HOLD THE CONVERTED NUMBER
+    
 
     if (useFah.checked && findCel.checked){
         farenheitTemp=startTempValue;
         celsiusTemp= fahToCel(farenheitTemp);
         tempConversion=celsiusTemp
-        convertedTempDisplay.innerHTML="Degrees in Celsius: "
+        convertedTempDisplay.innerHTML="Degrees in Celsius: " + tempConversion.toFixed(2);
     }else if(useFah.checked && findKel.checked){
         farenheitTemp=startTempValue;
         celsiusTemp=fahToCel(farenheitTemp);
         kelvinTemp=celToKel(celsiusTemp);
         tempConversion=kelvinTemp
-        convertedTempDisplay.innerHTML="Degrees in Kelvin: "
+        convertedTempDisplay.innerHTML="Degrees in Kelvin: " + tempConversion.toFixed(2);
     }else if(useCel.checked && findFah.checked){
         celsiusTemp=startTempValue
         farenheitTemp=celToFah(celsiusTemp);
         tempConversion=farenheitTemp
-        convertedTempDisplay.innerHTML="Degrees in Farenheit: "
+        convertedTempDisplay.innerHTML="Degrees in Farenheit: " + tempConversion.toFixed(2);
     }else if(useCel.checked && findKel.checked){
         celsiusTemp=startTempValue
         kelvinTemp=celToKel(celsiusTemp);
         tempConversion=kelvinTemp
-        convertedTempDisplay.innerHTML="Degrees in Kelvin: "
+        convertedTempDisplay.innerHTML="Degrees in Kelvin: " + tempConversion.toFixed(2);
     }else if(useKel.checked && findCel.checked){
         kelvinTemp=startTempValue
         celsiusTemp=kelToCel(kelvinTemp);
         tempConversion=celsiusTemp
-        convertedTempDisplay.innerHTML="Degrees in Celsius: "
+        convertedTempDisplay.innerHTML="Degrees in Celsius: "+ tempConversion.toFixed(2);
     }else if(useKel.checked && findFah.checked){
         kelvinTemp=startTempValue
         celsiusTemp=kelToCel(kelvinTemp);
         farenheitTemp=celToFah(celsiusTemp);
         tempConversion=farenheitTemp;
-        convertedTempDisplay.innerHTML="Degrees in Farenheit: "
+        convertedTempDisplay.innerHTML="Degrees in Farenheit: " + tempConversion.toFixed(2);
     }else{
         alert("Error:  Two different temperture units must be selected")
+        convertedTempDisplay.innerHTML=""
     }//END IF/ELSE
 
     
    
     //USE THE GLOBAL VARIABLES CREATED EARLIER TO TARGET THE ELEMENT WHERE I WANT TO DISPLAY THE CONVERTED NUMBER - UPDATE THE TEXT BY USING .INNERHTML WITH tempConversion VARIABLE THAT WAS SET IN THE ABOVE IF/ELSE TREE
-    convertedTempDisplay.innerHTML+=tempConversion;
+    //convertedTempDisplay.innerHTML+=tempConversion;
 
     convertedTempDisplay.style.fontFamily="Honk"
     convertedTempDisplay.style.fontSize="60px"
-    let convertedBackground=document.querySelector(".tempResults")
+
+    tempConversion=0;
+ 
 }//END tempConverter
 
 function fahToCel(fahTemp){
